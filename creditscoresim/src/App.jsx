@@ -1,7 +1,15 @@
 import './styles/style.css';
 import QuestionCard from './QuestionCard';
 
-
+class Option {
+    constructor(optionText, colEffect, atpEffect, debtEffect, phEffect) {
+        this.optionText = optionText;
+        this.colEffect = colEffect;
+        this.atpEffect = atpEffect;
+        this.debtEffect = debtEffect;
+        this.phEffect = phEffect;
+  }
+}
 
 class Question {
     constructor(questionText, options, nextQuestion) {
