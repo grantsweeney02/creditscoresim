@@ -1,0 +1,17 @@
+:root {
+    --dark-blue: #3e54d3;
+    --blue: #4f80e2;
+    --aqua: #15cdca;
+    --lime: #4fe0b6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../../public/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
