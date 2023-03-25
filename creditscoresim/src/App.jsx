@@ -11,12 +11,15 @@ class Question {
     }
 }
 
-questions = [Question("Question 1",["A","B"],Question("Question 2",["#","?"],Question("Question 3",["Hi","Bye"],null)))]
-
+const questions = [new Question("Question 1",["A","B"],new Question("Question 2",["#","?"],new Question("Question 3",["Hi","Bye"],null)))]
+console.log(questions)
+console.log(questions[0].options)
 function App() {
   return (
-    <div></div>
-    <QuestionCard questionText={"Question 1"} options={["Option A","Option B"]}/>
+
+    <div className='question-card'>
+    <QuestionCard q={questions[0]}/>
+    </div>
   );
 }
 
