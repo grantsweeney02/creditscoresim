@@ -116,7 +116,7 @@ body {
 .credit_score {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .credit_score_text {
@@ -130,9 +130,9 @@ body {
     position: relative;
     font-family: 'Cinzel', serif;
     font-size: 50px;
-    background: url('../../public/images/wood_sign.png') no-repeat center center fixed;
-    background-size: fit;
-    width: 400px;
+    background: url('../../public/images/new_scroll_small.png') no-repeat center center fixed;
+    background-size: fiit;
+    width: 550px;
     height: 300px;
     color: black;
     display: flex;

@@ -278,9 +278,6 @@ const Sim = () => {
                     </div>
                     <div className="credit_score">
                         <h1 className={"credit_score_text"+"_"+classNameColor(creditScoreRange(player.creditScore)[0])}>
-                            Credit Score: {creditScoreRange(player.creditScore)[0]}{" "}
-                        </h1>
-                        <h1 className="credit_score_text">
                             Credit Score: {creditScoreRange(player.creditScore)[1]}{" "}
                         </h1>
                     </div>
