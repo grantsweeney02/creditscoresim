@@ -25,6 +25,7 @@ class Player {
         this.ph = 0;
         this.cardAge = 0;
         // this.growth = 0.0;
+        this.hasWarranty = false;
     }
 
 
@@ -51,16 +52,21 @@ const majors = [["English","Poetry","Philosophy","Media Studies"],
 
 const beatJobs = [["Enlist in the armed forces","Chicken farmer","McDonald's burger flipper"],["Masseuse","GrubHub Delivery","Musician"]];
 
-const creditQ = new Question("Would you like a credit card?");
+const vacations = [[]]
+
+const creditQ = new Question("You just turned 18! Would you like to get your first credit card?");
 const collegeQ = new Question("Would you like to go college?");
 const majorQ = new Question("What would you like to study?");
 const careerQ = new Question("What would you like to do next?");
 const industryQ = new Question("What job will you take?");
-const locationQ = new Question("Where do you want to live?");
+const locationQ = new Question("Where do you want to move?");
+const houseQ = new Question("Where would you like to live?");
 const carQ = new Question("What kind of car do you want?");
+const tvQ = new Question("You bought a new TV for your home! Would you like to buy a warranty?");
 const kidsQ = new Question("How many kids do you want?");
 const schoolQ = new Question("Where will you send your kids?");
-const q8 = new Question("Question 8");
+const vacationQ = new Question("Where would you like to go on vacation?");
+
 
 creditQ.options[0] = new Option("Yes",collegeQ,4,0,15,30,0);
 creditQ.options[1] = new Option("No",collegeQ,1,0,30,0,0);
@@ -83,23 +89,25 @@ locationQ.options[0] = new Option("Urban area",kidsQ,2,35,0,0,0);
 locationQ.options[1] = new Option("The suburbs",carQ,2,20,0,15,0);
 locationQ.options[2] = new Option("Buttfuck nowhere",carQ,2,15,0,0,0);
 
-carQ.options[0] = new Option("Used car",kidsQ,1,7,0,2,0);
-carQ.options[1] = new Option("Brand new car",kidsQ,1,10,0,5,0);
+carQ.options[0] = new Option("Used car",houseQ,1,7,0,2,0);
+carQ.options[1] = new Option("Brand new car",houseQ,1,10,0,5,0);
+
+tvQ.options[0] = new Option("Buy a warranty", null);
+tvQ.options[1] = new Option("Don't buy a warranty", null);
+
+houseQ.options[0] = new Option("House", kidsQ);
+houseQ.options[1] = new Option("Apartment", kidsQ);
 
 kidsQ.options[0] = new Option("0 kids",null,0,0,0,0,0);
 kidsQ.options[1] = new Option("1 kid",schoolQ,2,10,0,2,0);
 kidsQ.options[2] = new Option("2 kids",schoolQ,4,18,0,4,0);
 kidsQ.options[3] = new Option("4 kids",schoolQ,7,30,0,6,0);
 
-schoolQ.options[0] = new Option("Public school",null,1,0,0,0,0);
-schoolQ.options[1] = new Option("Private school",null,1,15,0,8,0);
+schoolQ.options[0] = new Option("Public school",tvQ,1,0,0,0,0);
+schoolQ.options[1] = new Option("Private school",tvQ,1,15,0,8,0);
 
-
-
-
-
-
-
+vacationQ.options[0] = new Option("");
+vacationQ.options[1] = new Option("");
 
 
 
@@ -111,7 +119,7 @@ function App() {
     const [currQuestion, setCurrQuestion] = useState(creditQ);
 
     const nextQuestion = (option)=> {
-        if((cardHasBeenAsked == 0 && player.age>=25) || (cardHasBeenAsked==1 && player.age>=35)) {
+        if((cardHasBeenAsked === 0 && player.age>=25) || (cardHasBeenAsked === 1 && player.age>=35)) {
             cardHasBeenAsked++;
             traceQuestion = option.question;
             creditQ.questionText = 'You\'re '+player.age+' years old. Would you like a credit card now?';
