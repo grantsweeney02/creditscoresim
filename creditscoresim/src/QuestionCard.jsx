@@ -1,7 +1,8 @@
 import React from 'react'
+import OptionBtn from './OptionBtn';
 
 
-const QuestionCard = ({ q }) => {
+const QuestionCard = ({ q, nq}) => {
     // const onSelectAnswer = (event)=>{
     //     let btn = event.target
     //     addAnswer(btn.name,btn.value);
@@ -15,7 +16,7 @@ const QuestionCard = ({ q }) => {
         <h3 className="question">{q.questionText}</h3>
         {/* <div className='answer-section' onChange={(e)=>{onSelectAnswer(e)}}> */}
         <div className="options-section">
-   {q.options?.map(o => <p>{o}</p>)}
+   {q.options?.map(o => <OptionBtn o={o} nq={nq}/>)}
         </div>
         
     </div>
