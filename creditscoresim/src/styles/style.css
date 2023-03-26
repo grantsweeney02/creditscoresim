@@ -9,13 +9,44 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('../../public/images/open_sea_background.png');
+    background-image: url('../../public/images/starting_background2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.pirate_ship {
-    position: center;
+
+.question__card {
+    display: flex;
+    background-color: bisque;
+    padding-right: 50px;
+    justify-content: center;
+    align-items: left;
+    padding: 5px;
+}
+
+.question__text {
+    color: var(--aqua);
+}
+
+.question__options {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    padding: 5px;
+}
+
+.question__options_option {
+    justify-content: center; 
+    align-content: space-between;
+
+    
+
+    
 }
