@@ -7,7 +7,6 @@ const Home = () => {
                 <div className="question__card">
                     <h3 className="question__text">You Finished!</h3>
                     <div class="line"></div>
-                    <div className='answer-section' onChange={(e)=>{onSelectAnswer(e)}}>
                     <div className="question__options">
                         <button className="question__options_option">
                             Play Again?
