@@ -195,19 +195,19 @@ locationQ.options[2] = new Option("Rural", carQ, 2, 15, 0, 0, 0);
 carQ.options[0] = new Option("Used car", kidsQ, 1, 7, 0, 2);
 carQ.options[1] = new Option("Brand new car", kidsQ, 1, 10, 0, 5);
 
-tvQ.options[0] = new Option("Buy a warranty", null);
-tvQ.options[1] = new Option("Don't buy a warranty", null);
+// tvQ.options[0] = new Option("Buy a warranty", null);
+// tvQ.options[1] = new Option("Don't buy a warranty", null);
 
 houseQ.options[0] = new Option("House", kidsQ);
 houseQ.options[1] = new Option("Apartment", kidsQ);
 
-kidsQ.options[0] = new Option("0 kids",tvQ);
+kidsQ.options[0] = new Option("0 kids",);
 kidsQ.options[1] = new Option("1 kid", schoolQ, 2, 10, 0, 2);
 kidsQ.options[2] = new Option("2 kids", schoolQ, 4, 18, 0, 4);
 kidsQ.options[3] = new Option("4 kids", schoolQ, 7, 30, 0, 6);
 
-schoolQ.options[0] = new Option("Public school",tvQ, 1);
-schoolQ.options[1] = new Option("Private school",tvQ, 1, 15, 0, 8);
+schoolQ.options[0] = new Option("Public school",null, 1);
+schoolQ.options[1] = new Option("Private school",null, 1, 15, 0, 8);
 
 vacationQ.options[0] = new Option("");
 vacationQ.options[1] = new Option("");
