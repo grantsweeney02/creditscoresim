@@ -66,7 +66,7 @@ body {
     justify-content: center;
     margin: 20px;
     padding: 100px;
-    background: url('../../public/images/scroll_large.png') no-repeat center center fixed;
+    background: url('../../public/images/new_scroll.png') no-repeat center center fixed;
     height: 600px;
     width: 800px;
 }
@@ -160,7 +160,7 @@ body {
     }
 
     to {
-        top: 0;
+        top: -40%;
     }
 }
 
@@ -188,43 +188,39 @@ a:hover {
     align-items: center;
     margin: 20px;
     padding: 100px;
-    background: url('../../public/images/scroll_large.png') no-repeat center center fixed;
+    background: url('../../public/images/new_scroll.png') no-repeat center center fixed;
     height: 600px;
     width: 800px;
 }
 
-.left, .right {
+.left,
+.right {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    width: 300px;
+    height: 350px;
 }
 
 .left {
-    width: 300px;
     justify-content: flex-start;
-    height: 400px;
     flex-direction: column;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
-.left > h1 {
+.left>h1 {
     text-decoration: underline;
     margin: 5px;
 }
 
-.left > h2 {
+.left>h2 {
     margin: 5px;
 }
 
-.left > p {
+.left>p {
     margin: 5px;
-}
-
-.right {
-    width: 300px;
-    height: 400px;
 }
 
 
@@ -246,6 +242,3 @@ a:hover {
     background-color: #f0f0f0;
     transform: scale(1.15);
 }
-
-
-

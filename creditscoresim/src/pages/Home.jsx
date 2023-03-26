@@ -20,7 +20,7 @@ const Home = () => {
                 <div className="sign">
                     <a
                         class="sign__text"
-                        href="/sim"
+                        href="/learn"
                         onClick={() => gotolearn()}
                     >
                         GET STARTED
