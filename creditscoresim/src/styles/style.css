@@ -28,7 +28,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: url('../../public/images/starting_background.png') no-repeat top center fixed;
+    background: url('../../public/images/underwater.png') no-repeat top center fixed;
     background-size: cover;
 }
 
