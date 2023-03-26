@@ -242,3 +242,22 @@ a:hover {
     background-color: #f0f0f0;
     transform: scale(1.15);
 }
+
+.credit_score_text_best-green {
+    color: green;
+}
+.credit_score_text_reg-green {
+color: greenyellow;
+}
+.credit_score_text_yellow {
+    color: yellow;
+    }
+.credit_score_text_orange {
+        color: orange;
+     }
+.credit_score_text_coral {
+    color: coral;
+}
+.credit_score_text_reg-green {
+    color: red;
+    }

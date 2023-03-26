@@ -61,6 +61,16 @@ const creditScoreRange = (score)=>{
         }
     }
 }
+const classNameColor = (str)=> {
+    let color = "";
+    if(str=="Excellent") color="best-green";
+    else if(str=="Very Good") color="reg-green";
+    else if(str=="Good") color="yellow";
+    else if(str=="Fair") color="orange";
+    else if(str=="Poor") color="coral";
+    else if(str=="Very Bad") color="red";
+    return color;
+}
 
 class Question {
     constructor(questionText, options = []) {
@@ -267,7 +277,7 @@ const Sim = () => {
                         </div>
                     </div>
                     <div className="credit_score">
-                        <h1 className="credit_score_text">
+                        <h1 className={"credit_score_text"+"_"+classNameColor(creditScoreRange(player.creditScore)[0])}>
                             Credit Score: {creditScoreRange(player.creditScore)[0]}{" "}
                         </h1>
                         <h1 className="credit_score_text">
