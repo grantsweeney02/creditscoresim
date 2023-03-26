@@ -120,7 +120,8 @@ body {
 }
 
 .credit_score_text {
-    font-size: 40px;
+    padding: 30px;
+    font-size: 60px;
     font-weight: bold;
     margin: 0;
 }
@@ -244,20 +245,55 @@ a:hover {
 }
 
 .credit_score_text_best-green {
-    color: green;
+    background-color: green;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 10px;
 }
+
 .credit_score_text_reg-green {
-color: greenyellow;
+    background-color: greenyellow;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 10px;
 }
+
 .credit_score_text_yellow {
-    color: yellow;
-    }
-.credit_score_text_orange {
-        color: orange;
-     }
-.credit_score_text_coral {
-    color: coral;
+    background-color: yellow;
+    padding: 20px;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 10px;
 }
-.credit_score_text_reg-green {
-    color: red;
-    }
+
+.credit_score_text_orange {
+    background-color: orange;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.credit_score_text_coral {
+    background-color: coral;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.credit_score_text_red {
+    background-color: red;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 10px;
+}
