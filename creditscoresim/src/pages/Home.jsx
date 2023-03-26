@@ -25,7 +25,7 @@ const Home = () => {
                     >
                         GET STARTED
                     </a>
-                    <img class="octocat" src="/images/pointer_cat.png" />
+                    <img class="octocat" src="/images/pointer_cat.png" alt=""/>
                 </div>
             </div>
         </body>
