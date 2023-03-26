@@ -125,3 +125,37 @@ body {
     font-weight: bold;
     margin: 0;
 }
+
+.sign {
+    padding-top: 40px;
+    position: relative;
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    background: url('../../public/images/wood_sign.png') no-repeat center center fixed;
+    background-size: fit;
+    width: 400px;
+    height: 300px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign__text {
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sign > img {
+    position: absolute;
+    left: 100%;
+}
+
+a:visited {
+    color: black;
+}
+a:hover {
+    transform: scale(1.05);
+}
