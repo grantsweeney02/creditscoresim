@@ -5,7 +5,9 @@ import Sim from "./pages/Sim";
 import Learn from "./pages/Learn";
 
 function App() {
+    
     return (
+        
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -13,7 +15,9 @@ function App() {
                 <Route path="/sim" element={<Sim />} />
             </Routes>
         </Router>
+        
     );
+    
 }
 
 export default App;

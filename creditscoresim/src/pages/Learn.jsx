@@ -2,6 +2,7 @@ import "../styles/style.css";
 
 const Learn = () => {
     return (
+      
         <body>
             <div className="container__learn">
                 <div className="learn__card">
@@ -36,11 +37,12 @@ const Learn = () => {
                         </p>
                     </div>
                     <div className="right">
-                        <a class="play__btn" href="/sim">PLAY NOW!</a>
+                        <a className="play__btn" href="/sim">PLAY NOW!</a>
                     </div>
                 </div>
             </div>
         </body>
+        
     );
 };
 

@@ -266,7 +266,7 @@ const Sim = () => {
                 <div className="container">
                     <div className="question__card">
                         <h3 className="question__text">You Finished!</h3>
-                        <div class="line"></div>
+                        <div className="line"></div>
                         <div className="question__options">
                             <button
                                 className="question__options_option"
