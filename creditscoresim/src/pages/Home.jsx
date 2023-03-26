@@ -3,7 +3,6 @@ import "../styles/style.css";
 const Home = () => {
     return (
         <body>
-<<<<<<< Updated upstream
             <div className="container">
                 <div className="question__card">
                     <h3 className="question__text">You Finished!</h3>
@@ -18,13 +17,6 @@ const Home = () => {
                 <div className="credit_score">
                     <h1 className="credit_score_text">Credit Score: </h1>
                 </div>
-=======
-            <div>
-            <p style="background-image: url('starting_background2.png');"/>
-            </div>
-            <div>
-                <img src="scroll.png" alt=""/>
->>>>>>> Stashed changes
             </div>
         </body>
     );
