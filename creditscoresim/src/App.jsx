@@ -23,7 +23,7 @@ class Player {
         this.debts = 0;
         this.age = 18;
         this.ph = 0;
-        this.cardTime = 0;
+        this.cardAge = 0;
         // this.growth = 0.0;
     }
 

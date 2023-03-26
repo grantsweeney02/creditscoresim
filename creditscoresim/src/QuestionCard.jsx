@@ -3,13 +3,7 @@ import OptionBtn from './OptionBtn';
 
 
 const QuestionCard = ({ q, nq, p}) => {
-    // const onSelectAnswer = (event)=>{
-    //     let btn = event.target
-    //     addAnswer(btn.name,btn.value);
-    // // }
-    // console.log(props)
-    // console.log(props.questionText);
-    // console.log(props.options)
+  
   return (
     
     <div className="question-card">
