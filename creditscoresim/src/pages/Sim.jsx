@@ -43,8 +43,22 @@ class Player {
         this.creditScore = ((Math.floor(rawScore)+30))*100;
         this.creditScore = (this.creditScore + 10000) / (20000)*(550)+300;
 
-        
+    }
+}
 
+const creditScoreRange = (score)=>{
+    const scoreRanges = {
+        "Excellent": [800,850],
+        "Very Good": [750, 799],
+        "Good": [700, 749],
+        "Fair": [650,699],
+        "Poor": [600,649],
+        "Very Bad": [300, 599],
+    };
+    for (let k in scoreRanges) {
+        if (score >= scoreRanges[k][0] && score <= scoreRanges[k][1]) {
+            return [k,scoreRanges[k][0]+" - "+scoreRanges[k][1]];
+        }
     }
 }
 
@@ -211,7 +225,7 @@ const Sim = () => {
     };
     const nextQuestion = (option) => {
 
-        if ((player.cardAge == 0) && ((cardHasBeenAsked === 0 && player.age >= 25) || (cardHasBeenAsked === 1 && player.age >= 35))) {
+        if ((player.cardAge === 0) && ((cardHasBeenAsked === 0 && player.age >= 25) || (cardHasBeenAsked === 1 && player.age >= 35))) {
 
             cardHasBeenAsked++;
             traceQuestion = option.question;
@@ -254,7 +268,10 @@ const Sim = () => {
                     </div>
                     <div className="credit_score">
                         <h1 className="credit_score_text">
-                            Credit Score: {player.creditScore}{" "}
+                            Credit Score: {creditScoreRange(player.creditScore)[0]}{" "}
+                        </h1>
+                        <h1 className="credit_score_text">
+                            Credit Score: {creditScoreRange(player.creditScore)[1]}{" "}
                         </h1>
                     </div>
                 </div>
