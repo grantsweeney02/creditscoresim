@@ -87,7 +87,7 @@ careerQ.options[2] = new Option("Burn out",locationQ,0,0,0,0,0);
 
 locationQ.options[0] = new Option("Urban area",kidsQ,2,35,0,0,0);
 locationQ.options[1] = new Option("The suburbs",carQ,2,20,0,15,0);
-locationQ.options[2] = new Option("Buttfuck nowhere",carQ,2,15,0,0,0);
+locationQ.options[2] = new Option("Rural",carQ,2,15,0,0,0);
 
 carQ.options[0] = new Option("Used car",houseQ,1,7,0,2,0);
 carQ.options[1] = new Option("Brand new car",houseQ,1,10,0,5,0);
