@@ -16,6 +16,7 @@ const OptionBtn = ({ o, nq, p}) => {
         if (p.debts < 0) p.debts = 0;
         // p.growth += p.growthEffect;
 
+        if(o.optionText === "Buy a warranty") p.hasWarranty = true;
     }
   return (
     <div>
