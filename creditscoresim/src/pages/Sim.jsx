@@ -38,9 +38,13 @@ class Player {
         this.creditScore = 0;
     }
     calcCreditScore() {
-        const rawScore =
-            this.ph + Math.max(0, this.age - this.cardAge) + -this.debts;
-        this.creditScore = Math.floor(rawScore);
+
+        const rawScore = (this.ph + Math.max(0,this.age-this.cardAge))+(-this.debts);
+        this.creditScore = ((Math.floor(rawScore)+30))*100;
+        this.creditScore = (this.creditScore + 10000) / (20000)*(550)+300;
+
+        
+
     }
 }
 
@@ -206,12 +210,9 @@ const Sim = () => {
         cardHasBeenAsked = 0;
     };
     const nextQuestion = (option) => {
-        if (
-            (player.cardAge === 0 &&
-                cardHasBeenAsked === 0 &&
-                player.age >= 25) ||
-            (cardHasBeenAsked === 1 && player.age >= 35)
-        ) {
+
+        if ((player.cardAge == 0) && ((cardHasBeenAsked === 0 && player.age >= 25) || (cardHasBeenAsked === 1 && player.age >= 35))) {
+
             cardHasBeenAsked++;
             traceQuestion = option.question;
             creditQ.questionText =
