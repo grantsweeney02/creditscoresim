@@ -1,13 +1,16 @@
-import './styles/style.css';
-import QuestionCard from './QuestionCard';
-
-questions = []
+import "./styles/style.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    
-    <QuestionCard questionText={"Question 1"} options={["Option A","Option B"]}/>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
