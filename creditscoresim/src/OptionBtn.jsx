@@ -20,7 +20,7 @@ const OptionBtn = ({ o, nq, p}) => {
     }
   return (
     <div>
-        <button className='option-btn' onClick={()=>{nq(o);applyEffects()}}>
+        <button className='question__options_option' onClick={()=>{nq(o);applyEffects()}}>
             {o.optionText}
         </button>
     </div>
