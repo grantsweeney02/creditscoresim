@@ -3,24 +3,32 @@ import QuestionCard from './QuestionCard';
 import React,{ useState } from 'react'
 
 class Option {
-    constructor(optionText, question, colEffect, atpEffect, debtEffect, phEffect, ) {
+    constructor(optionText, question, ageEffect, colEffect, atpEffect, debtEffect,  phEffect, ) {
         this.optionText = optionText;
         this.question = question;
+        this.ageEffect = ageEffect;
         this.colEffect = colEffect;
         this.atpEffect = atpEffect;
         this.debtEffect = debtEffect;
         this.phEffect = phEffect;
+        // this.growthEffect = growthEffect;
         
  }
 }
 
-// class Edge {
-//     constructor(qU, qV, option) {
-//         this.qU = qU;
-//         this.qV = qV;
-//         this.option = option;
-//     }
-// }
+class Player {
+    constructor() {
+        this.col = 0;
+        this.atp = 0;
+        this.debts = 0;
+        this.age = 18;
+        this.ph = 0;
+        this.cardTime = 0;
+        // this.growth = 0.0;
+    }
+
+
+}
 
 
 
@@ -31,14 +39,10 @@ class Question {
     }
 }
 
-// const eduPath = [new Question("What college?",
-// [new Option("UVA"),new Option("VT")]),
-// new Question("Major?",
-// [new Option("CS"),new Option("CPE")]),
-// new Question("Question 3",
-// new Option("A"),new Option("B"))];
+let traceQuestion;
+const player = new Player();
 
-// const questions = [eduPath];
+let cardHasBeenAsked = 0;
 
 const majors = [["English","Poetry","Philosophy","Media Studies"],
 ["Computer Engineering","Computer Science","Mechanical Engineering","Chemical Engineering"],
@@ -47,6 +51,7 @@ const majors = [["English","Poetry","Philosophy","Media Studies"],
 
 const beatJobs = [["Enlist in the armed forces","Chicken farmer","McDonald's burger flipper"],["Masseuse","GrubHub Delivery","Musician"]];
 
+const creditQ = new Question("Would you like a credit card?");
 const collegeQ = new Question("Would you like to go college?");
 const majorQ = new Question("What would you like to study?");
 const careerQ = new Question("What would you like to do next?");
@@ -57,36 +62,37 @@ const kidsQ = new Question("How many kids do you want?");
 const schoolQ = new Question("Where will you send your kids?");
 const q8 = new Question("Question 8");
 
+creditQ.options[0] = new Option("Yes",collegeQ,4,0,15,30,0);
+creditQ.options[1] = new Option("No",collegeQ,1,0,30,0,0);
+collegeQ.options[0] = new Option("Yes",majorQ,4,0,15,30,0);
+collegeQ.options[1] = new Option("No",industryQ,1,0,30,0,0);
 
-collegeQ.options[0] = new Option("Yes",majorQ);
-collegeQ.options[1] = new Option("No",industryQ);
+majorQ.options[0] = new Option(majors[0][Math.floor(Math.random()*4)],careerQ,0,0,10,10,0);
+majorQ.options[1] = new Option(majors[1][Math.floor(Math.random()*4)],careerQ,0,0,20,15,0);
+majorQ.options[2] = new Option(majors[2][Math.floor(Math.random()*4)],careerQ,0,0,25,20,0);
+majorQ.options[3] = new Option(majors[3][Math.floor(Math.random()*4)],careerQ,0,0,15,10,0);
 
-majorQ.options[0] = new Option(majors[0][Math.floor(Math.random()*4)],careerQ);
-majorQ.options[1] = new Option(majors[1][Math.floor(Math.random()*4)],careerQ);
-majorQ.options[2] = new Option(majors[2][Math.floor(Math.random()*4)],careerQ);
-majorQ.options[3] = new Option(majors[3][Math.floor(Math.random()*4)],careerQ);
+industryQ.options[0] = new Option(beatJobs[0][Math.floor(Math.random()*3)],locationQ,0,0,7,0,0);
+industryQ.options[1] = new Option(beatJobs[1][Math.floor(Math.random()*3)],locationQ,0,0,5,0,0);
 
-industryQ.options[0] = new Option(beatJobs[0][Math.floor(Math.random()*3)],locationQ);
-industryQ.options[1] = new Option(beatJobs[1][Math.floor(Math.random()*3)],locationQ);
+careerQ.options[0] = new Option("Graduate School",locationQ,4,5,10,10,0);
+careerQ.options[1] = new Option("Take a career in your field",locationQ,0,0,15,0,0);
+careerQ.options[2] = new Option("Burn out",locationQ,0,0,0,0,0);
 
-careerQ.options[0] = new Option("Graduate School",locationQ);
-careerQ.options[1] = new Option("Take a career in your field",locationQ);
-careerQ.options[2] = new Option("Burn out",locationQ);
+locationQ.options[0] = new Option("Urban area",kidsQ,2,35,0,0,0);
+locationQ.options[1] = new Option("The suburbs",carQ,2,20,0,15,0);
+locationQ.options[2] = new Option("Buttfuck nowhere",carQ,2,15,0,0,0);
 
-locationQ.options[0] = new Option("Urban area",kidsQ);
-locationQ.options[1] = new Option("The suburbs",carQ);
-locationQ.options[2] = new Option("Buttfuck nowhere",carQ);
+carQ.options[0] = new Option("Used car",kidsQ,1,7,0,2,0);
+carQ.options[1] = new Option("Brand new car",kidsQ,1,10,0,5,0);
 
-carQ.options[0] = new Option("Used car",kidsQ);
-carQ.options[1] = new Option("Brand new car",kidsQ);
+kidsQ.options[0] = new Option("0 kids",null,0,0,0,0,0);
+kidsQ.options[1] = new Option("1 kid",schoolQ,2,10,0,2,0);
+kidsQ.options[2] = new Option("2 kids",schoolQ,4,18,0,4,0);
+kidsQ.options[3] = new Option("4 kids",schoolQ,7,30,0,6,0);
 
-kidsQ.options[0] = new Option("0 kids",);
-kidsQ.options[1] = new Option("1 kid",schoolQ);
-kidsQ.options[2] = new Option("2 kids",schoolQ);
-kidsQ.options[3] = new Option("4 kids",schoolQ);
-
-schoolQ.options[0] = new Option("Public school",);
-schoolQ.options[1] = new Option("Private school",)
+schoolQ.options[0] = new Option("Public school",null,1,0,0,0,0);
+schoolQ.options[1] = new Option("Private school",null,1,15,0,8,0);
 
 
 
@@ -102,10 +108,18 @@ schoolQ.options[1] = new Option("Private school",)
 
 function App() {
 
-    const [currQuestion, setCurrQuestion] = useState(collegeQ);
+    const [currQuestion, setCurrQuestion] = useState(creditQ);
 
     const nextQuestion = (option)=> {
-        if(option.question != null) {
+        if((cardHasBeenAsked == 0 && player.age>=25) || (cardHasBeenAsked==1 && player.age>=35)) {
+            cardHasBeenAsked++;
+            traceQuestion = option.question;
+            creditQ.questionText = 'You\'re '+player.age+' years old. Would you like a credit card now?';
+            creditQ.options[0] = new Option("Yes",traceQuestion);
+            creditQ.options[1] = new Option("No",traceQuestion);
+            setCurrQuestion(creditQ);
+        }
+        else if(option.question != null) {
          setCurrQuestion(option.question);
         }
         else setCurrQuestion(null);
@@ -115,7 +129,7 @@ function App() {
   return (
 
     <div className='question-card'>
-    {currQuestion != null ? <QuestionCard q={currQuestion} nq={nextQuestion}/>: <p>No more</p> }
+    {currQuestion != null ? <QuestionCard q={currQuestion} nq={nextQuestion} p={player}/>: <p>No more</p> }
     </div>
   );
 }
