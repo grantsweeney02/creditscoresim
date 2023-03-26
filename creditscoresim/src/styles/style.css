@@ -97,7 +97,8 @@ body {
 
 .question__options_option {
     margin: 5px;
-    max-width: 200px;
+    width: 200px;
+    text-align: center;
     padding: 10px;
     font-family: 'Cinzel', serif;
     font-size: 30px;
