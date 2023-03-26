@@ -3,7 +3,7 @@ import "../styles/style.css";
 const Home = () => {
     return (
         <body>
-            <div></div>
+            <img class="pirate_ship" src="../../images/pirate_ship.png" alt="" />
         </body>
     );
 };

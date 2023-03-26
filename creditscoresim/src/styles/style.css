@@ -9,9 +9,13 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('../../public/images/background.jpg');
+    background-image: url('../../public/images/open_sea_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+}
+
+.pirate_ship {
+    position: center;
 }
