@@ -9,6 +9,7 @@ const OptionBtn = ({ o, nq, p}) => {
         p.debts += o.debtEffect;
         p.age+=o.ageEffect;
         p.ph += o.phEffect;
+        if(o.cardAgeEffect!=0) p.cardAge=o.cardAgeEffect;
         
         let netIncome = p.atp - p.col;
         p.ph += netIncome*.2;
@@ -18,12 +19,9 @@ const OptionBtn = ({ o, nq, p}) => {
 
         if(o.optionText === "Buy a warranty") p.hasWarranty = true;
     }
-    const calcCreditScore = ()=> {
-      
-    }
   return (
     <div>
-        <button className='question__options_option' onClick={()=>{nq(o);applyEffects()}}>
+        <button className='question__options_option' onClick={()=>{nq(o);applyEffects();p.calcCreditScore();}}>
             {o.optionText}
         </button>
     </div>
