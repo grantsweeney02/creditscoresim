@@ -6,47 +6,110 @@
 }
 
 body {
-    margin: 0;
+    margin: 0px;
     padding: 0;
+    font-family: 'Cinzel', serif;
     height: 100vh;
-    background-image: url('../../public/images/starting_background2.png');
+    background: url('../../public/images/question_background.jpg') no-repeat top center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .body {
+        background-size: contain;
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.image-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
 
 .question__card {
     display: flex;
-    background-color: bisque;
-    padding-right: 50px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: left;
-    padding: 5px;
+    margin: 20px;
+    padding: 100px;
+    background: url('../../public/images/scroll_large.png') no-repeat center center fixed;
+    height: 600px;
+    width: 800px;
+    border-radius: 10px;
 }
 
 .question__text {
-    color: var(--aqua);
+    margin: 40px;
+    width: 600px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.line {
+    width: 600px;
+    border-top: 4px solid black;
+    margin: 20px 0;
 }
 
 .question__options {
     display: flex;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
-    padding: 5px;
+    width: 600px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
 }
 
 .question__options_option {
-    justify-content: center; 
-    align-content: space-between;
+    margin: 5px;
+    max-width: 200px;
+    padding: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-    
+.question__options_option:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.15);
+}
 
-    
+.credit_score {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.credit_score_text {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
 }
