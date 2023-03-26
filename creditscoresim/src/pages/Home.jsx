@@ -20,12 +20,12 @@ const Home = () => {
                 <div className="sign">
                     <a
                         class="sign__text"
-                        href="/sim"
+                        href="/learn"
                         onClick={() => gotolearn()}
                     >
                         GET STARTED
                     </a>
-                    <img class="octocat" src="/images/pointer_cat.png" />
+                    <img class="octocat" src="/images/pointer_cat.png" alt=""/>
                 </div>
             </div>
         </body>
