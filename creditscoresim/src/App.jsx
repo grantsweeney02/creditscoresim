@@ -33,6 +33,7 @@ class Player {
         this.cardAge = 0;
         // this.growth = 0.0;
         this.hasWarranty = false;
+        this.creditScore = 0;
     }
 }
 

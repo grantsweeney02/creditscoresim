@@ -18,6 +18,9 @@ const OptionBtn = ({ o, nq, p}) => {
 
         if(o.optionText === "Buy a warranty") p.hasWarranty = true;
     }
+    const calcCreditScore = ()=> {
+      
+    }
   return (
     <div>
         <button className='question__options_option' onClick={()=>{nq(o);applyEffects()}}>
