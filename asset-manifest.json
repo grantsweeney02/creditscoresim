@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/creditscoresim/static/css/main.0d4f67dc.css",
-    "main.js": "/creditscoresim/static/js/main.fba79ba9.js",
+    "main.js": "/creditscoresim/static/js/main.9e18b6e2.js",
     "static/media/question_background.jpg": "/creditscoresim/static/media/question_background.0188570964f459b4f117.jpg",
     "static/media/underwater.jpg": "/creditscoresim/static/media/underwater.dca197aff05ca9bda48e.jpg",
     "static/media/new_scroll.png": "/creditscoresim/static/media/new_scroll.2e8d3c92bd1aaae79065.png",
     "static/media/new_scroll_small.png": "/creditscoresim/static/media/new_scroll_small.baeec6adb4838d9e7cfd.png",
     "index.html": "/creditscoresim/index.html",
     "main.0d4f67dc.css.map": "/creditscoresim/static/css/main.0d4f67dc.css.map",
-    "main.fba79ba9.js.map": "/creditscoresim/static/js/main.fba79ba9.js.map"
+    "main.9e18b6e2.js.map": "/creditscoresim/static/js/main.9e18b6e2.js.map"
   },
   "entrypoints": [
     "static/css/main.0d4f67dc.css",
-    "static/js/main.fba79ba9.js"
+    "static/js/main.9e18b6e2.js"
   ]
 }
